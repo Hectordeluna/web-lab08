@@ -42,7 +42,7 @@ app.get('/blog-posts', (req, res, next) => {
     });
 });
 
-app.post('/blog-post', jsonParser, (req, res, next) => {
+app.get('/blog-post', jsonParser, (req, res, next) => {
     let author = req.query.author;
 
     if (!author) {

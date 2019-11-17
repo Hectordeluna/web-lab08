@@ -8,18 +8,13 @@ document.getElementById("searchAuthor").onclick = function() {
 
     let author = document.getElementById("item").value;
 
-    let data = {
-        "author": author,
-    };
-
-    fetch('blog-post', {
-        method: 'POST',
+    fetch('blog-post/' + $.param({author: author}), {
+        method: 'GET',
         dataType: 'jsonp',
         headers: {
         'Content-Type': 'application/json;charset=utf-8',
         'Access-Control-Allow-Origin': '*'
         },
-        body: JSON.stringify(data),
     }).then(data => {
         if (!data.ok) {
             document.getElementById("errorId").innerHTML = "";
