@@ -138,7 +138,7 @@ document.getElementById("deletePost").onclick = function() {
 
 function getall() {
     document.getElementById("list").innerHTML = "";
-    fetch('/blog-posts', {
+    fetch('http://localhost:8080/blog-posts', {
         method: 'GET',
         dataType: 'jsonp',
         headers: {

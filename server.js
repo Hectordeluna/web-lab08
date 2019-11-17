@@ -4,6 +4,8 @@ let mongoose = require('mongoose');
 const uuidv4 = require('uuid/v4');
 const bodyParser = require('body-parser');
 let { PostList } = require('./blog-post-model');
+const dotenv = require('dotenv');
+dotenv.config();
 let { DATABASE_URL, PORT } = require('./config');
 
 let app = express();
