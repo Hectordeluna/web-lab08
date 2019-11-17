@@ -27,7 +27,6 @@ document.getElementById("searchAuthor").onclick = function() {
         }
     }).then(response => {
         response = JSON.parse(response);
-        console.log(response);
         response.forEach(element => {
             var node = document.createElement("li"); 
             var id = document.createElement("p");                 
@@ -152,7 +151,6 @@ function getall() {
         }
     }).then(response => {
         response = JSON.parse(response);
-        console.log(response);
         response.forEach(element => {
             var node = document.createElement("li"); 
             var id = document.createElement("p");                 
