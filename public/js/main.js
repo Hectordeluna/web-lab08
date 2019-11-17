@@ -4,6 +4,7 @@ window.onload = function() {
 };
 
 document.getElementById("searchAuthor").onclick = function() {
+    event.preventDefault();
     document.getElementById("list").innerHTML = "";
 
     let author = document.getElementById("item").value;
