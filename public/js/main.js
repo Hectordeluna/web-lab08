@@ -7,8 +7,9 @@ document.getElementById("searchAuthor").onclick = function() {
     document.getElementById("list").innerHTML = "";
 
     let author = document.getElementById("item").value;
+    let url = "blog-post/?author=" +  author;
 
-    fetch('blog-post/' + $.param({author: author}), {
+    fetch(url, {
         method: 'GET',
         dataType: 'jsonp',
         headers: {
