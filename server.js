@@ -42,7 +42,7 @@ app.get('/blog-posts', (req, res, next) => {
     });
 });
 
-app.get('/blog-post', (req, res, next) => {
+app.post('/blog-post', jsonParser, (req, res, next) => {
     let author = req.query.author;
 
     if (!author) {
@@ -70,7 +70,6 @@ app.post('/blog-posts', jsonParser, (req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, access-control-allow-origin");
     
     const {title, content, author} = req.body;
-    console.log(req.body);
     if (!title || !content || !author) {
         return res.status(406).json({
             code: 406,

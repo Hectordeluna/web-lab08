@@ -13,7 +13,7 @@ document.getElementById("searchAuthor").onclick = function() {
     };
 
     fetch('blog-post', {
-        method: 'GET',
+        method: 'POST',
         dataType: 'jsonp',
         headers: {
         'Content-Type': 'application/json;charset=utf-8',
