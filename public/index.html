@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>
+    Blog
+  </title>
+</head>
+
+<body>
+  <div>
+    <div class="container">
+      <h2 class="title">
+        Blog
+      </h2>
+      <form>
+        <input type="text" placeholder="Search..." id="item">
+        <button type="submit" id="searchAuthor">
+          Search by Author
+        </button>
+      </form>
+    </div>
+    <div class="form-container">
+      <ul id="list" class="forms">
+      </ul>
+      <form class="forms">
+        Title:<br>
+        <input id="title" type="text" name="title"><br>
+        Content:<br>
+        <input id="content" type="text" name="content">
+        Author:<br>
+        <input id="author" type="text" name="author">
+        <input id="newPost" type="submit" value="New">
+      </form>
+      <form class="forms">
+        Id:<br>
+        <input id="id" type="text" name="title"><br>
+        <input id="deletePost" type="submit" value="Delete">
+        <input id="update" type="submit" value="Update">
+      </form>
+      <div id="errorId">
+
+      </div>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
