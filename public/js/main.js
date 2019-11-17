@@ -12,7 +12,7 @@ document.getElementById("searchAuthor").onclick = function() {
         "author": author,
     };
 
-    fetch('/blog-post', {
+    fetch('blog-post', {
         method: 'GET',
         dataType: 'jsonp',
         headers: {
@@ -63,7 +63,7 @@ document.getElementById("newPost").onclick = function() {
         "content": content,
     };
 
-    let response = fetch('http://localhost:8080/blog-posts', {
+    let response = fetch('blog-posts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -96,7 +96,7 @@ document.getElementById("update").onclick = function() {
         "content": content,
     };
 
-    let response = fetch('/blog-posts/' + id, {
+    let response = fetch('blog-posts/' + id, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -120,7 +120,7 @@ document.getElementById("deletePost").onclick = function() {
     let id = document.getElementById("id").value;
 
 
-    let response = fetch('/blog-posts/' + id, {
+    let response = fetch('blog-posts/' + id, {
         method: 'DELETE',
         headers: {'content-type': 'application/json'},
     }).then(data => {
@@ -138,7 +138,7 @@ document.getElementById("deletePost").onclick = function() {
 
 function getall() {
     document.getElementById("list").innerHTML = "";
-    fetch('http://localhost:8080/blog-posts', {
+    fetch('blog-posts', {
         method: 'GET',
         dataType: 'jsonp',
         headers: {
